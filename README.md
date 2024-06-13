@@ -99,7 +99,7 @@ Example:
 
 ```csv
 SUBJECT,Tau
-3227GX,24.15
+A0001,24.15
 ```
 
 ## Dependencies
