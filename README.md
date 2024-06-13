@@ -50,6 +50,12 @@ The Circadian Rhythm Analysis Tool is a user-friendly application designed to pr
     install.packages(c('here', 'readr', 'dplyr', 'tidyr', 'lubridate', 'numbers', 'Matrix', 'nlme'), repos='http://cran.us.r-project.org')
     ```
 
+4. **Update local R install location:**
+
+   Edit "main.py" line 9
+   ```RSCRIPT_PATH = "C:\\Program Files\\R\\R-4.2.2\\bin\\Rscript.exe" # Change to your Rscript path ```
+
+
 ## Usage
 
 1. **Run the Streamlit application:**
@@ -79,8 +85,8 @@ Example:
 
 ```csv
 SUBJECT,Labtime,MEL,elapsed_time_hrs
-3227GX,5754.53,0.95,0.00
-3227GX,5755.52,0.97,0.98
-3227GX,5756.53,7.96,2.00
-3227GX,5757.57,25.48,3.03
-3227GX,5758.53,44.69,4.00
+A0001,5754.53,0.95,0.00
+A0001,5755.52,0.97,0.98
+A0001,5756.53,7.96,2.00
+A0001,5757.57,25.48,3.03
+A0001,5758.53,44.69,4.00
