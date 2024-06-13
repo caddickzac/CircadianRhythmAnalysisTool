@@ -10,9 +10,7 @@ The Circadian Rhythm Analysis Tool is a user-friendly application designed to pr
 - [Input Data Format](#input-data-format)
 - [Output Data Format](#output-data-format)
 - [Dependencies](#dependencies)
-- [Contributing](#contributing)
-- [License](#license)
-
+- [Create a batch file to run program instead of using command line](#Create-a-batch-file-to-run-program-instead-of-using-command-line)
 ## Features
 
 - Upload multiple CSV files for analysis.
@@ -55,28 +53,6 @@ The Circadian Rhythm Analysis Tool is a user-friendly application designed to pr
    Edit "main.py" line 9
    ```RSCRIPT_PATH = "C:\\Program Files\\R\\R-4.2.2\\bin\\Rscript.exe" # Change to your Rscript path ```
 
-## Create a batch file to run program
-1. Create text document on desktop
-2. Enter code below, changing "[working directory]" to your local directory where the streamlit app is saved. 
-
-```bash
-@echo off
-REM set working directory
-cd [working directory]
-
-REM Activate the virtual environment
-call venv/Scripts/activate
-
-REM Run the Streamlit app using the Python installation in the virtual environment
-streamlit run main.py
-
-REM Pause command to keep the terminal open after the script runs (optional)
-pause
-```
-3. Save and close text document.
-4. Change file type from ".txt" to ".bat"
-5. Now you can run the batch file as a shortcut icon and avoid having to enter any code in the command line!
-
 
 ## Usage
 
@@ -112,3 +88,45 @@ A0001,5755.52,0.97,0.98
 A0001,5756.53,7.96,2.00
 A0001,5757.57,25.48,3.03
 A0001,5758.53,44.69,4.00
+```
+
+## Output Data Format
+The output CSV file will contain two columns:
+
+SUBJECT: Identifier for the subject.
+Tau: Estimated intrinsic circadian period.
+Example:
+
+```csv
+SUBJECT,Tau
+3227GX,24.15
+```
+
+## Dependencies
+Python 3.9+
+R 4.1.2+
+Python packages: streamlit, pandas
+R packages: here, readr, dplyr, tidyr, lubridate, numbers, Matrix, nlme
+
+
+## Create a batch file to run program instead of using command line
+1. Create text document on desktop
+2. Enter code below, changing "[working directory]" to your local directory where the streamlit app is saved. 
+
+```bash
+@echo off
+REM set working directory
+cd [working directory]
+
+REM Activate the virtual environment
+call venv/Scripts/activate
+
+REM Run the Streamlit app using the Python installation in the virtual environment
+streamlit run main.py
+
+REM Pause command to keep the terminal open after the script runs (optional)
+pause
+```
+3. Save and close text document.
+4. Change file type from ".txt" to ".bat"
+5. Now you can run the batch file as a shortcut icon and avoid having to enter any code in the command line!
