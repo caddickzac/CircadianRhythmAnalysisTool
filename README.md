@@ -55,6 +55,28 @@ The Circadian Rhythm Analysis Tool is a user-friendly application designed to pr
    Edit "main.py" line 9
    ```RSCRIPT_PATH = "C:\\Program Files\\R\\R-4.2.2\\bin\\Rscript.exe" # Change to your Rscript path ```
 
+## Create a batch file to run program
+1. Create text document on desktop
+2. Enter code below, changing "[working directory]" to your local directory where the streamlit app is saved. 
+
+```bash
+@echo off
+REM set working directory
+cd [working directory]
+
+REM Activate the virtual environment
+call venv/Scripts/activate
+
+REM Run the Streamlit app using the Python installation in the virtual environment
+streamlit run main.py
+
+REM Pause command to keep the terminal open after the script runs (optional)
+pause
+```
+3. Save and close text document.
+4. Change file type from ".txt" to ".bat"
+5. Now you can run the batch file as a shortcut icon and avoid having to enter any code in the command line!
+
 
 ## Usage
 
